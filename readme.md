@@ -1,12 +1,11 @@
-# mobicon [![Build Status](https://travis-ci.org/SamVerschueren/mobicon.svg?branch=master)](https://travis-ci.org/SamVerschueren/mobicon)
+# genicon-cli [![Build Status](https://travis-ci.com/andrefortin/genicon.svg?branch=master)](https://travis-ci.com/andrefortin/genicon)
 
-> Mobile app icon generator
-
+> Generate icons for mobile apps and browser extensions/plugins
 
 ## Install
 
 ```
-$ npm install --save mobicon
+$ npm install --save genicon
 ```
 
 ### GraphicsMagick
@@ -33,25 +32,27 @@ $ sudo apt-get install graphicsmagick
 $ choco install graphicsmagick
 ```
 
-
 ## Usage
 
 ```js
-const mobicon = require('mobicon');
+const genicon = require("genicon");
 
-mobicon('icon.png', {platform: 'android'}).then(() => {
-    // icons generated
+genicon("icon.png", { platform: "android" }).then(() => {
+	// icons generated
 });
 
-mobicon('icon.svg', {platform: 'ios', background: '#ff0000', contentRatio: 1}).then(() => {
-    // icons generated
+genicon("icon.svg", {
+	platform: "ios",
+	background: "#ff0000",
+	contentRatio: 1,
+}).then(() => {
+	// icons generated
 });
 ```
 
-
 ## API
 
-### mobicon(file, options)
+### genicon(file, options)
 
 #### file
 
@@ -63,9 +64,9 @@ Source file of the icon.
 
 ##### platform
 
-*Required*<br>
+_Required_<br>
 Type: `string`<br>
-Values: `pwa` `android` `ios` `blackberry10`
+Values: `android` `blackberry10` `chrome` `ios` `pwa`
 
 Platform to generate the icons for.
 
@@ -104,21 +105,9 @@ Default: `process.cwd()`
 
 Directory to save the generated icons.
 
-
 ## Platforms
 
-The supported platforms are `PWA`, `Android`, `iOS` and `BlackBerry 10`. Every platform generates a different set of icons.
-
-### PWA
-
-- `icon-72x72.png`
-- `icon-96x96.png`
-- `icon-128x128.png`
-- `icon-144x144.png`
-- `icon-152x152.png`
-- `icon-192x192.png`
-- `icon-384x384.png`
-- `icon-512x512.png`
+The supported platforms are `Android`, `BlackBerry 10`, `Chrome`, `iOS`, and `PWA`. Every platform generates a different set of icons.
 
 ### Android
 
@@ -128,6 +117,20 @@ The supported platforms are `PWA`, `Android`, `iOS` and `BlackBerry 10`. Every p
 - `mipmap-xhdpi/icon.png`
 - `mipmap-xxhdpi/icon.png`
 - `mipmap-xxxhdpi/icon.png`
+
+### BlackBerry 10
+
+- `icon-90.png`
+- `icon-96.png`
+- `icon-110.png`
+- `icon-144.png`
+
+### Google Chrome Extension
+
+- `icon-16.png`
+- `icon-32.png`
+- `icon-48.png`
+- `icon-128.png`
 
 ### iOS
 
@@ -151,20 +154,22 @@ The supported platforms are `PWA`, `Android`, `iOS` and `BlackBerry 10`. Every p
 - `icon-76@2x.png`
 - `icon-83.5@2x.png`
 
-### BlackBerry 10
+### PWA
 
-- `icon-90.png`
-- `icon-96.png`
-- `icon-110.png`
-- `icon-144.png`
-
+- `icon-72x72.png`
+- `icon-96x96.png`
+- `icon-128x128.png`
+- `icon-144x144.png`
+- `icon-152x152.png`
+- `icon-192x192.png`
+- `icon-384x384.png`
+- `icon-512x512.png`
 
 ## Related
 
-- [mobicon-cli](https://github.com/SamVerschueren/mobicon-cli) - The CLI for this module
+- [genicon-cli](https://github.com/andrefortin/genicon-cli) - The CLI for this module
 - [mobisplash](https://github.com/SamVerschueren/mobisplash) - Mobile app splash screen generator
-
 
 ## License
 
-MIT © [Sam Verschueren](http://github.com/SamVerschueren)
+MIT © [Andre Fortin](http://github.com/andrefortin)

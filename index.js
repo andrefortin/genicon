@@ -25,7 +25,6 @@ const platformIcons = {
 // See https://material.io/design/platform-guidance/android-icons.html#keyline-shapes
 const platformRadius = new Map([
 	['android', 0.0909],
-	['chrome', 0.0909],
 	['pwa', 0.0909]
 ]);
 

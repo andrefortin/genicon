@@ -1,16 +1,23 @@
 {
-	"name": "mobicon",
-	"version": "3.0.1",
-	"description": "Mobile app icon generator",
+	"name": "genicon",
+	"version": "1.0.0",
+	"description": "Generate icons for mobile apps and broswer extensions/plugins.",
 	"license": "MIT",
-	"repository": "SamVerschueren/mobicon",
+	"repository": "https://github.com/andrefortin/genicon",
 	"author": {
-		"name": "Sam Verschueren",
-		"email": "sam.verschueren@gmail.com",
-		"url": "https://github.com/SamVerschueren"
+		"name": "Andre Fortin",
+		"email": "andre.v.fortin@gmail.com",
+		"url": "https://github.com/andrefortin"
 	},
+	"contributors": [
+		{
+			"name": "Sam Verschueren",
+			"email": "sam.verschueren@gmail.com",
+			"url": "https://github.com/SamVerschueren"
+		}
+	],
 	"engines": {
-		"node": ">=8"
+		"node": ">=10"
 	},
 	"scripts": {
 		"test": "jest"
@@ -26,8 +33,13 @@
 		"icon",
 		"generator",
 		"mobicon",
+		"genicon",
 		"cordova",
 		"chrome",
+		"chromium",
+		"browser",
+		"extension",
+		"plugin",
 		"android",
 		"ios",
 		"blackberry10"
