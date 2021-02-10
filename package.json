@@ -1,6 +1,6 @@
 {
 	"name": "genicon",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "Generate icons for mobile apps and broswer extensions/plugins.",
 	"license": "MIT",
 	"repository": "https://github.com/andrefortin/genicon",
@@ -56,8 +56,7 @@
 		"mkdirp": "^0.5.1",
 		"path-exists": "^3.0.0",
 		"pify": "^2.3.0",
-		"pwa-icon-list": "^1.0.0",
-		"tempy": "^0.3.0"
+		"pwa-icon-list": "^1.0.0"
 	},
 	"devDependencies": {
 		"@types/jest": "^26.0.20",
@@ -65,6 +64,7 @@
 		"eslint-plugin-promise": "^4.2.1",
 		"jest": "^26.6.3",
 		"parse-png": "^1.1.2",
-		"tempfile": "^1.1.1"
+		"tempfile": "^1.1.1",
+		"tempy": "^1.0.0"
 	}
 }
