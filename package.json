@@ -1,6 +1,6 @@
 {
 	"name": "genicon",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Generate icons for mobile apps and broswer extensions/plugins.",
 	"license": "MIT",
 	"repository": "https://github.com/andrefortin/genicon",
