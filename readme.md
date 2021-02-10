@@ -130,6 +130,15 @@ The supported platforms are `Android`, `BlackBerry 10`, `Chrome`, `iOS`, and `PW
 - `icon-16.png`
 - `icon-32.png`
 - `icon-48.png`
+- `icon-96.png`
+- `icon-128.png`
+
+### Firefox Extension
+
+- `icon-16.png`
+- `icon-32.png`
+- `icon-48.png`
+- `icon-96.png`
 - `icon-128.png`
 
 ### iOS

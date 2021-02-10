@@ -104,6 +104,7 @@ describe('chrome platform', () => {
 			pathExists(path.join(tempFile, 'icon-16.png')),
 			pathExists(path.join(tempFile, 'icon-32.png')),
 			pathExists(path.join(tempFile, 'icon-48.png')),
+			pathExists(path.join(tempFile, 'icon-96.png')),
 			pathExists(path.join(tempFile, 'icon-128.png')),
 		]);
 		let doesExist = true;
@@ -124,6 +125,51 @@ describe('chrome platform', () => {
 			pathExists(path.join(tempFile, 'icon-16.png')),
 			pathExists(path.join(tempFile, 'icon-32.png')),
 			pathExists(path.join(tempFile, 'icon-48.png')),
+			pathExists(path.join(tempFile, 'icon-96.png')),
+			pathExists(path.join(tempFile, 'icon-128.png')),
+		]);
+		let doesExist = true;
+		doesFileExist.map(item => {
+			if (!item) {
+				doesExist = false;
+			}
+		});
+
+		expect(doesExist).toBe(true);
+	});
+});
+
+describe('firefox platform', () => {
+	test('firefox - png input', async () => {
+		const tempFile = tempfile();
+		await fn('fixtures/icon.png', { platform: 'firefox', dest: tempFile });
+
+		const doesFileExist = await Promise.all([
+			pathExists(path.join(tempFile, 'icon-16.png')),
+			pathExists(path.join(tempFile, 'icon-32.png')),
+			pathExists(path.join(tempFile, 'icon-48.png')),
+			pathExists(path.join(tempFile, 'icon-96.png')),
+			pathExists(path.join(tempFile, 'icon-128.png')),
+		]);
+		let doesExist = true;
+		doesFileExist.map(item => {
+			if (!item) {
+				doesExist = false;
+			}
+		});
+
+		expect(doesExist).toBe(true);
+	});
+
+	test('firefox - svg input', async () => {
+		const tempFile = tempfile();
+		await fn('fixtures/icon.svg', { platform: 'firefox', dest: tempFile });
+
+		const doesFileExist = await Promise.all([
+			pathExists(path.join(tempFile, 'icon-16.png')),
+			pathExists(path.join(tempFile, 'icon-32.png')),
+			pathExists(path.join(tempFile, 'icon-48.png')),
+			pathExists(path.join(tempFile, 'icon-96.png')),
 			pathExists(path.join(tempFile, 'icon-128.png')),
 		]);
 		let doesExist = true;
@@ -286,7 +332,7 @@ describe('image output size', () => {
 });
 
 describe('transparent corners', () => {
-	test('pwa - icon-72x72.png', async () => {
+	test('pwa - icon-72.png', async () => {
 		const tempFile = tempfile();
 		await fn('fixtures/icon.svg', { platform: 'pwa', dest: tempFile, roundedCorners: true });
 

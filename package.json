@@ -37,6 +37,7 @@
 		"cordova",
 		"chrome",
 		"chromium",
+		"firefox",
 		"browser",
 		"extension",
 		"plugin",
@@ -45,10 +46,11 @@
 		"blackberry10"
 	],
 	"dependencies": {
-		"android-icon-list": "^1.0.1",
+		"android-icon-list": "^1.0.0",
 		"bb10-icon-list": "^1.0.0",
-		"chrome-icon-list": "^1.0.1",
+		"chrome-icon-list": "^1.0.0",
 		"execa": "^1.0.0",
+		"firefox-icon-list": "^1.0.0",
 		"gm": "^1.21.1",
 		"ios-icon-list": "^1.0.0",
 		"mkdirp": "^0.5.1",

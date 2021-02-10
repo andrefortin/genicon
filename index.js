@@ -9,6 +9,7 @@ const mask = require('./lib/mask');
 const androidIcons = require('android-icon-list');
 const bb10Icons = require('bb10-icon-list');
 const chromeIcons = require('chrome-icon-list');
+const firefoxIcons = require('firefox-icon-list');
 const iosIcons = require('ios-icon-list');
 const pwaIcons = require('pwa-icon-list');
 
@@ -18,6 +19,7 @@ const platformIcons = {
 	android: androidIcons(),
 	blackberry10: bb10Icons(),
 	chrome: chromeIcons(),
+	firefox: firefoxIcons(),
 	ios: iosIcons(),
 	pwa: pwaIcons()
 };
